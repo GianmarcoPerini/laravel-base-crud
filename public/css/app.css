@@ -12177,6 +12177,10 @@ ul {
   list-style: none;
 }
 
+ul li a {
+  text-decoration: none;
+}
+
 .active {
   background-color: #0257d5;
 }
