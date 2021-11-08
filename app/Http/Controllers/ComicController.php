@@ -24,7 +24,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comic.create');
     }
 
     /**
@@ -35,7 +35,17 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $comic = new Comic();
+
+        // con questi metodi BISOGNA ricordarsi di inserire i 'fillable' nel model (lista di elementi che si stanno aggiungendo)
+        // $comic->fill($data);
+        $comic = Comic::create($data);
+
+        $comic->save();
+
+        return redirect()->route('comic.index');
     }
 
     /**

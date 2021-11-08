@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $comic->title)
+
 @section('main-access')
     <div class="container">
         <div class="row">
