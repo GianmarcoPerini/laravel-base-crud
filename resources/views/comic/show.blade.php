@@ -22,5 +22,10 @@
             
         </div>
         <button><a href="{{ route('comic.edit', $comic->id) }}">Edit</a></button>
+        <form action="{{ route('comic.destroy', $comic) }}" method="POST">
+            @method('DELETE')
+            <button>Delete</button>
+        </form>
+        
     </div>
 @endsection
